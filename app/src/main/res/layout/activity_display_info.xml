@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DisplayInfoActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/xStartGuide"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/yStartGuide"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/xEndGuide"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/yEndGuide"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.97" />
+    
+    <TextView
+        android:id="@+id/btnGoBack"
+        android:onClick="btnGoBack_Click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⇱"
+        android:textSize="28dp"
+        android:textColor="@color/white"
+        android:background="@drawable/new_item_button_style"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="2dp"
+        app:layout_constraintStart_toStartOf="@id/xStartGuide"
+        app:layout_constraintEnd_toEndOf="@id/xEndGuide"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toTopOf="@id/yStartGuide" />
+
+    <LinearLayout
+        android:id="@+id/infoLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/xStartGuide"
+        app:layout_constraintEnd_toEndOf="@id/xEndGuide"
+        app:layout_constraintTop_toBottomOf="@id/btnGoBack"
+        app:layout_constraintBottom_toBottomOf="@id/yEndGuide"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTodoHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Header Here"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/tvTodoInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:text="Info Here" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
