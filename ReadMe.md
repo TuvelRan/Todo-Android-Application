@@ -1,6 +1,8 @@
 ## About
 This is a simple todo list application made in Android Studio, written in Kotlin.
 
+![homeimg](https://i.imgur.com/vV4ipbE.png) ![todoimg](https://imgur.com/pxxGCdb.png)
+![dialogimg](https://imgur.com/hBeLEwU.png)
 ## How-It-Works
 Saving the todo list to a Shared Preferences instance. Gson was used to parse the list to a json format.
 
